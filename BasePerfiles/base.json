@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "W44X335",
+        "tipo": "I",
+        "peso_lbf/ft":335.21,
+        "altura_in": 44,
+        "longitud_ala_in": 15.90,
+        "espesor_alma_in": 1.03,
+        "espesor_ala_in": 1.77,
+        "area_in2": 98.5,
+        "inersia_in4": 1200,
+        "centroide_x_in": 7.95,
+        "centroide_y_in": 22,
+        "s3_top_in3": 1413.64,
+        "s3_bottom_in3": 1413.64
+    },
+    {
+        "nombre": "WT22X167.5",
+        "tipo": "T",
+        "peso_lbf/ft":167.44,
+        "altura_in": 22,
+        "longitud_ala_in": 15.90,
+        "espesor_alma_in": 1.03,
+        "espesor_ala_in": 1.77,
+        "area_in2": 49.2,
+        "inersia_in4": 600,
+        "centroide_x_in": 7.95,
+        "centroide_y_in": 16.47,
+        "s3_top_in3": 392.41,
+        "s3_bottom_in3": 131.75
+    },
+    {
+        "nombre": "WT22X167.5",
+        "tipo": "I",
+        "peso_lbf/ft":167.44,
+        "altura_in": 22,
+        "longitud_ala_in": 15.90,
+        "espesor_alma_in": 1.03,
+        "espesor_ala_in": 1.77,
+        "area_in2": 49.2,
+        "inersia_in4": 600,
+        "centroide_x_in": 7.95,
+        "centroide_y_in": 16.47,
+        "s3_top_in3": 392.41,
+        "s3_bottom_in3": 131.75
+    }
+]
