@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filtros de perfiles de acero</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #d8dee6;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0;
+    }
+
+    header {
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr)) auto;
+      gap: 14px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      min-height: 40px;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    input,
+    select {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--text);
+      padding: 8px 10px;
+    }
+
+    button {
+      border: 0;
+      background: var(--accent);
+      color: white;
+      padding: 0 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--accent-dark);
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      background: white;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    th {
+      background: #eef2f7;
+      color: #334155;
+      font-size: 13px;
+    }
+
+    th:first-child,
+    td:first-child,
+    th:nth-child(2),
+    td:nth-child(2) {
+      text-align: left;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .empty {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    @media (max-width: 860px) {
+      .filters {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 20px, 1180px);
+        padding: 18px 0;
+      }
+
+      .filters {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .summary {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Base de perfiles de acero</h1>
+      <p>Filtra perfiles por tipo y parametros minimos de diseno.</p>
+    </header>
+
+    <section class="panel" aria-label="Filtros de perfiles">
+      <div class="filters">
+        <label>
+          Tipo
+          <select id="tipo">
+            <option value="">Todos</option>
+            <option value="I">I</option>
+            <option value="T">T</option>
+            <option value="L">L</option>
+            <option value="C">C</option>
+            <option value="S">S</option>
+            <option value="O">O</option>
+          </select>
+        </label>
+
+        <label>
+          S superior minimo
+          <input id="sTop" type="number" min="0" step="0.01" placeholder="Ej: 1000">
+        </label>
+
+        <label>
+          Area minima
+          <input id="area" type="number" min="0" step="0.01" placeholder="Ej: 80">
+        </label>
+
+        <label>
+          Altura minima
+          <input id="altura" type="number" min="0" step="0.01" placeholder="Ej: 40">
+        </label>
+
+        <button id="limpiar" type="button">Limpiar</button>
+      </div>
+
+      <div class="summary">
+        <span id="conteo"></span>
+        <span>Unidades: pulgadas, in2, in3 e in4 segun corresponda.</span>
+      </div>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <script>
+    const perfiles = [
+      {
+        nombre: "W44X335",
+        tipo: "I",
+        "peso_lbf/ft": 335.21,
+        altura_in: 44,
+        longitud_ala_in: 15.90,
+        espesor_alma_in: 1.03,
+        espesor_ala_in: 1.77,
+        area_in2: 98.5,
+        inersia_in4: 1200,
+        centroide_x_in: 7.95,
+        centroide_y_in: 22,
+        s3_top_in3: 1413.64,
+        s3_bottom_in3: 1413.64
+      },
+      {
+        nombre: "WT22X167.5",
+        tipo: "T",
+        "peso_lbf/ft": 167.44,
+        altura_in: 22,
+        longitud_ala_in: 15.90,
+        espesor_alma_in: 1.03,
+        espesor_ala_in: 1.77,
+        area_in2: 49.2,
+        inersia_in4: 600,
+        centroide_x_in: 7.95,
+        centroide_y_in: 16.47,
+        s3_top_in3: 392.41,
+        s3_bottom_in3: 131.75
+      },
+      {
+        nombre: "W44X290",
+        tipo: "I",
+        "peso_lbf/ft": 290.63,
+        altura_in: 43.60,
+        longitud_ala_in: 15.80,
+        espesor_alma_in: 0.87,
+        espesor_ala_in: 1.58,
+        area_in2: 85.40,
+        inersia_in4: 1040,
+        centroide_x_in: 7.90,
+        centroide_y_in: 21.80,
+        s3_top_in3: 1238.53,
+        s3_bottom_in3: 1238.53
+      }
+    ];
+
+    const columnas = [
+      "nombre",
+      "tipo",
+      "peso_lbf/ft",
+      "altura_in",
+      "longitud_ala_in",
+      "espesor_alma_in",
+      "espesor_ala_in",
+      "area_in2",
+      "inersia_in4",
+      "centroide_x_in",
+      "centroide_y_in",
+      "s3_top_in3",
+      "s3_bottom_in3"
+    ];
+
+    const entradas = {
+      tipo: document.getElementById("tipo"),
+      sTop: document.getElementById("sTop"),
+      area: document.getElementById("area"),
+      altura: document.getElementById("altura")
+    };
+
+    const resultado = document.getElementById("resultado");
+    const conteo = document.getElementById("conteo");
+    const limpiar = document.getElementById("limpiar");
+
+    function numeroFiltro(valor) {
+      return valor === "" ? null : Number(valor);
+    }
+
+    function filtrarPerfiles() {
+      const tipo = entradas.tipo.value;
+      const sTop = numeroFiltro(entradas.sTop.value);
+      const area = numeroFiltro(entradas.area.value);
+      const altura = numeroFiltro(entradas.altura.value);
+
+      return perfiles.filter((perfil) => {
+        const coincideTipo = tipo === "" || perfil.tipo === tipo;
+        const coincideSTop = sTop === null || perfil.s3_top_in3 >= sTop;
+        const coincideArea = area === null || perfil.area_in2 >= area;
+        const coincideAltura = altura === null || perfil.altura_in >= altura;
+
+        return coincideTipo && coincideSTop && coincideArea && coincideAltura;
+      });
+    }
+
+    function mostrarTabla(datos) {
+      conteo.textContent = `${datos.length} perfil(es) encontrados`;
+
+      if (datos.length === 0) {
+        resultado.innerHTML = '<div class="empty">No hay perfiles que cumplan esos filtros.</div>';
+        return;
+      }
+
+      const encabezado = columnas.map((columna) => `<th>${columna}</th>`).join("");
+      const filas = datos.map((perfil) => {
+        const celdas = columnas.map((columna) => `<td>${perfil[columna]}</td>`).join("");
+        return `<tr>${celdas}</tr>`;
+      }).join("");
+
+      resultado.innerHTML = `
+        <div class="table-wrap">
+          <table>
+            <thead><tr>${encabezado}</tr></thead>
+            <tbody>${filas}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function actualizar() {
+      mostrarTabla(filtrarPerfiles());
+    }
+
+    Object.values(entradas).forEach((entrada) => {
+      entrada.addEventListener("input", actualizar);
+      entrada.addEventListener("change", actualizar);
+    });
+
+    limpiar.addEventListener("click", () => {
+      entradas.tipo.value = "";
+      entradas.sTop.value = "";
+      entradas.area.value = "";
+      entradas.altura.value = "";
+      actualizar();
+    });
+
+    actualizar();
+  </script>
+</body>
+</html>
