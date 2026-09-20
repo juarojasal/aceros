@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Distribución de usos - Losa nervada en C</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background:#ffffff; margin:0; padding:20px; color:#1a1a1a; }
+  h1 { font-size:18px; margin:0 0 4px 0; }
+  .sub { font-size:12px; color:#555; margin-bottom:16px; }
+  .wrap { display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; }
+  .legend { font-size:13px; line-height:1.5; min-width:260px; }
+  .legend .item { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .swatch { width:16px; height:16px; border:1px solid #666; flex:none; }
+  .note { font-size:12px; color:#444; margin-top:14px; padding:10px; background:#f6f6f6; border-left:3px solid #999; }
+  table { border-collapse:collapse; font-size:12px; margin-top:10px; }
+  td, th { border:1px solid #ccc; padding:4px 8px; text-align:left; }
+  tfoot td { font-weight:bold; background:#f6f6f6; }
+</style>
+</head>
+<body>
+  <h1>Propuesta de distribución: salones y corredor</h1>
+  <div class="sub">Losa nervada en forma de C · 16.00 x 16.00 m · Ejes A-B-C-D / 1-2-3-4 · nervios @ 0.10 m típico · actualizado según el plano de AutoCAD vigente</div>
+
+  <div class="wrap">
+    <svg width="520" height="500" viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L7,3 z" fill="#777"/>
+        </marker>
+      </defs>
+      <!-- Zones -->
+      <!-- Corredor B-C, todo el largo (franja reducida a 3.00 m) -->
+      <rect x="262" y="50" width="72" height="384" fill="#cfe3f7" stroke="#3a6ea5" stroke-width="1.5"/>
+      <!-- Aula 1 (A-B, fila 1-2) -->
+      <rect x="70" y="290" width="192" height="144" fill="#d9f0d3" stroke="#4c8a45" stroke-width="1.5"/>
+      <!-- Aula 2 (A-B, fila 2-3) -->
+      <rect x="70" y="170" width="192" height="120" fill="#d9f0d3" stroke="#4c8a45" stroke-width="1.5"/>
+      <!-- Aula 3 (A-B, fila 3-4) -->
+      <rect x="70" y="50" width="192" height="120" fill="#d9f0d3" stroke="#4c8a45" stroke-width="1.5"/>
+      <!-- Aula 4 (C-D, fila 1-2) -->
+      <rect x="334" y="290" width="120" height="144" fill="#d9f0d3" stroke="#4c8a45" stroke-width="1.5"/>
+      <!-- Aula 5 (C-D, fila 3-4) -->
+      <rect x="334" y="50" width="120" height="120" fill="#d9f0d3" stroke="#4c8a45" stroke-width="1.5"/>
+      <!-- Escaleras (C-D, fila 2-3) -->
+      <rect x="334" y="170" width="120" height="120" fill="#ffffff" stroke="#999999" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <rect x="334" y="170" width="120" height="120" fill="#f2f2f2"/>
+      <g stroke="#9a9a9a" stroke-width="1">
+        <line x1="346" y1="184" x2="442" y2="184"/>
+        <line x1="346" y1="198" x2="442" y2="198"/>
+        <line x1="346" y1="212" x2="442" y2="212"/>
+        <line x1="346" y1="226" x2="442" y2="226"/>
+        <line x1="346" y1="240" x2="442" y2="240"/>
+        <line x1="346" y1="254" x2="442" y2="254"/>
+        <line x1="346" y1="268" x2="442" y2="268"/>
+      </g>
+      <line x1="394" y1="274" x2="394" y2="188" stroke="#777" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+      <!-- Axis / grid lines (columnas) -->
+      <line x1="70" y1="50" x2="70" y2="434" stroke="#222" stroke-width="2"/>
+      <line x1="262" y1="50" x2="262" y2="434" stroke="#222" stroke-width="2"/>
+      <line x1="334" y1="50" x2="334" y2="434" stroke="#222" stroke-width="3"/>
+      <line x1="454" y1="50" x2="454" y2="170" stroke="#222" stroke-width="2"/>
+      <line x1="454" y1="290" x2="454" y2="434" stroke="#222" stroke-width="2"/>
+      <!-- Axis / grid lines (filas, bordes exteriores) -->
+      <line x1="70" y1="50" x2="454" y2="50" stroke="#222" stroke-width="2"/>
+      <line x1="70" y1="434" x2="454" y2="434" stroke="#222" stroke-width="2"/>
+      <!-- Ejes internos (discontinuos) dentro de cada franja de aulas -->
+      <line x1="70" y1="170" x2="262" y2="170" stroke="#666" stroke-width="1" stroke-dasharray="5 3"/>
+      <line x1="70" y1="290" x2="262" y2="290" stroke="#666" stroke-width="1" stroke-dasharray="5 3"/>
+      <line x1="334" y1="170" x2="454" y2="170" stroke="#666" stroke-width="1" stroke-dasharray="5 3"/>
+      <line x1="334" y1="290" x2="454" y2="290" stroke="#666" stroke-width="1" stroke-dasharray="5 3"/>
+
+      <!-- Column labels (top) -->
+      <text x="70" y="36" font-size="13" text-anchor="middle" font-weight="bold">A</text>
+      <text x="262" y="36" font-size="13" text-anchor="middle" font-weight="bold">B</text>
+      <text x="334" y="36" font-size="13" text-anchor="middle" font-weight="bold">C</text>
+      <text x="454" y="36" font-size="13" text-anchor="middle" font-weight="bold">D</text>
+      <!-- Row labels (left) -->
+      <text x="55" y="54" font-size="13" text-anchor="end" font-weight="bold">4</text>
+      <text x="55" y="174" font-size="13" text-anchor="end" font-weight="bold">3</text>
+      <text x="55" y="294" font-size="13" text-anchor="end" font-weight="bold">2</text>
+      <text x="55" y="438" font-size="13" text-anchor="end" font-weight="bold">1</text>
+
+      <!-- Dimension labels (horizontal, ejes A-B-C-D) -->
+      <text x="166" y="450" font-size="10" text-anchor="middle" fill="#555">8.00</text>
+      <text x="298" y="450" font-size="10" text-anchor="middle" fill="#555">3.00</text>
+      <text x="394" y="450" font-size="10" text-anchor="middle" fill="#555">5.00</text>
+
+      <!-- Dimension labels (verticales, ejes 1-2-3-4) -->
+      <text x="40" y="362" font-size="10" text-anchor="middle" fill="#555" transform="rotate(-90 40 362)">6.00</text>
+      <text x="40" y="230" font-size="10" text-anchor="middle" fill="#555" transform="rotate(-90 40 230)">5.00</text>
+      <text x="40" y="110" font-size="10" text-anchor="middle" fill="#555" transform="rotate(-90 40 110)">5.00</text>
+
+      <!-- Zone labels -->
+      <text x="298" y="242" font-size="12" text-anchor="middle" font-weight="bold" fill="#1d4a75" transform="rotate(-90 298 242)">CORREDOR &#8212; 3.00 x 16.00 m</text>
+
+      <text x="166" y="356" font-size="12" text-anchor="middle" font-weight="bold" fill="#2f5c2a">AULA 1</text>
+      <text x="166" y="370" font-size="9" text-anchor="middle" fill="#2f5c2a">8.00 x 6.00 m</text>
+
+      <text x="166" y="224" font-size="12" text-anchor="middle" font-weight="bold" fill="#2f5c2a">AULA 2</text>
+      <text x="166" y="238" font-size="9" text-anchor="middle" fill="#2f5c2a">8.00 x 5.00 m</text>
+
+      <text x="166" y="104" font-size="12" text-anchor="middle" font-weight="bold" fill="#2f5c2a">AULA 3</text>
+      <text x="166" y="118" font-size="9" text-anchor="middle" fill="#2f5c2a">8.00 x 5.00 m</text>
+
+      <text x="394" y="356" font-size="12" text-anchor="middle" font-weight="bold" fill="#2f5c2a">AULA 4</text>
+      <text x="394" y="370" font-size="9" text-anchor="middle" fill="#2f5c2a">5.00 x 6.00 m</text>
+
+      <text x="394" y="104" font-size="12" text-anchor="middle" font-weight="bold" fill="#2f5c2a">AULA 5</text>
+      <text x="394" y="118" font-size="9" text-anchor="middle" fill="#2f5c2a">5.00 x 5.00 m</text>
+
+      <text x="394" y="224" font-size="11" text-anchor="middle" fill="#666">ESCALERAS</text>
+      <text x="394" y="238" font-size="9" text-anchor="middle" fill="#666">5.00 x 5.00 m</text>
+
+      <!-- Beam C label -->
+      <text x="340" y="60" font-size="9" fill="#222">viga eje C</text>
+    </svg>
+
+    <div class="legend">
+      <div class="item"><div class="swatch" style="background:#d9f0d3;border-color:#4c8a45;"></div><div><b>Aulas</b> (1 a 5) — carga viva 2,0 kN/m² (NSR-10, Tabla B.4.2.1-1 "Cargas vivas mínimas uniformemente distribuidas")</div></div>
+      <div class="item"><div class="swatch" style="background:#cfe3f7;border-color:#3a6ea5;"></div><div><b>Corredor</b> (franja B-C, 3.00 m) — carga viva 5,0 kN/m² (NSR-10, Tabla B.4.2.1-1 "Cargas vivas mínimas uniformemente distribuidas")</div></div>
+      <div class="item"><div class="swatch" style="background:#f2f2f2;border:1px dashed #999;"></div><div><b>Escaleras</b> — zona de circulación vertical (sector C-D / 2-3, 5.00 x 5.00 m)</div></div>
+
+      <table>
+        <tr><th>Zona</th><th>Ejes</th><th>Área</th><th>Uso</th></tr>
+        <tr><td>Aula 1</td><td>A-B / 1-2</td><td>48 m²</td><td>Salón</td></tr>
+        <tr><td>Aula 2</td><td>A-B / 2-3</td><td>40 m²</td><td>Salón</td></tr>
+        <tr><td>Aula 3</td><td>A-B / 3-4</td><td>40 m²</td><td>Salón</td></tr>
+        <tr><td>Aula 4</td><td>C-D / 1-2</td><td>30 m²</td><td>Salón</td></tr>
+        <tr><td>Aula 5</td><td>C-D / 3-4</td><td>25 m²</td><td>Salón</td></tr>
+        <tr><td>Corredor</td><td>B-C / 1-4</td><td>48 m²</td><td>Circulación</td></tr>
+        <tr><td>Escaleras</td><td>C-D / 2-3</td><td>25 m²</td><td>Circulación vertical</td></tr>
+        <tfoot>
+          <tr><td colspan="2">Área bruta en planta</td><td>256 m²</td><td>16.00 x 16.00 m</td></tr>
+        </tfoot>
+      </table>
+
+      <div class="note">
+        La viga del eje C es la frontera estructural entre el corredor (lado B-C) y los salones 4 y 5 (lado C-D). Esa viga recibe, en tramos distintos, la reacción de nervios cargados con 2,0 kN/m² (donde tributa a las aulas 4/5) y con 5,0 kN/m² (donde tributa al corredor) a lo largo de sus 16 m de longitud — no lleva un único valor uniforme en toda la luz.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

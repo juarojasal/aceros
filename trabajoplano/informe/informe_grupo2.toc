@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Descripción general}{1}{section.1}%
+\contentsline {section}{\numberline {2}Planta estructural propuesta}{1}{section.2}%
+\contentsline {section}{\numberline {3}Criterios iniciales de carga}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Peso propio de la losa maciza}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Combinación de cargas mayoradas}{4}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Análisis de la franja continua por pendiente-deflexión a mano}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Esquema estructural y cargas}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Momentos de empotramiento}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Ecuaciones de equilibrio y solución}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Momentos en los apoyos}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Reacciones, y diagramas de cortante y de momento}{8}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Nota}{10}{section.5}%

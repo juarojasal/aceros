@@ -1,0 +1,25 @@
+{
+    "unidades": {
+        "cargas": "kN/m2",
+        "volumen_losa": "m3/m2",
+        "volumen_estandar": "m3/m2"
+    },
+    "datos_entrada": {
+        "particiones": 2,
+        "acabados": 1.8,
+        "instalaciones": 0.5,
+        "oficinas": 2,
+        "corredores": 3,
+        "altura_losa": 0.05,
+        "peso_hormigon": 24
+    },
+    "resultados": {
+        "volumen_losa": 0.05,
+        "volumen_estandar": 0.05,
+        "carga_losa": 1.2,
+        "carga_total_oficinas": 9.8,
+        "carga_total_corredores": 11.4,
+        "carga_diseno_oficinas": 10,
+        "carga_diseno_corredores": 12
+    }
+}
