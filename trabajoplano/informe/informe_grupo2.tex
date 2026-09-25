@@ -10,7 +10,7 @@
 \usepackage{array}
 \usepackage{hyperref}
 \usepackage{tikz}
-\usetikzlibrary{patterns}
+\usetikzlibrary{patterns,calc}
 \usepackage{amsmath}
 
 \geometry{margin=2.5cm}
@@ -39,11 +39,11 @@
     \rule{\linewidth}{0.4pt}
     \vspace{1cm}
 
-    {\Huge \textbf{Diseño de losa maciza para un plantel educativo}\par}
+    {\Huge \textbf{Diseño preliminar de nervios de una losa de dos direcciones para una estructura de acero}\par}
     \vspace{0.6cm}
 
     \vspace{0.3cm}
-    {\large Diseño Estructural Avanzado\par}
+    {\large Diseño Basico de Estructuras de Acero\par}
 
     \vspace{1cm}
     \rule{\linewidth}{0.4pt}
@@ -54,13 +54,13 @@
     \vspace{0.4cm}
     Juan Miguel Rojas Álvarez\par
     Miguel Ángel Medina Muñoz\par
-    Jhon\par
+    Jhon Alexander Hernandez Londoño\par
 
     \vspace{0.8cm}
 
     \textbf{Profesor:} \, Juan Fernando Velásquez Bedoya\par
     \vspace{0.3cm}
-    \textbf{Fecha de entrega:} \, 12 de septiembre de 2026
+    \textbf{Fecha de entrega:} \, 25 de septiembre de 2026
 \end{titlepage}
 
 \pagenumbering{roman}
@@ -70,17 +70,17 @@
 
 \section{Descripción general}
 
-Este informe presenta el diseño preliminar de una losa maciza de concreto reforzado, abarcando desde el diseño arquitectonico del plano seleccionado, el calculo de cargas que debe soportar una franja representativa de losa y la cuantia y distribucion necesaria para el refuerzo.
+Este informe presenta el diseño preliminar de una losa maciza de concreto reforzado, abarcando desde el diseño arquitectonico del plano seleccionado, el calculo de cargas que debe soportar dos nervios en la misma dirección, tambien estimando una primera sección a partir del calculo de los diagramas de momentos.
 
 \section{Planta estructural propuesta}
 
-La planta estructural propuesta corresponde a una losa maciza de concreto reforzado organizada sobre los ejes A-B-C-D y 1-2-3-4. La geometria general ocupa un rectangulo de 16,00 m por 16,00 m, con una modulacion horizontal de 8,00 m, 3,00 m y 5,00 m, y una modulacion vertical de 6,00 m, 5,00 m y 5,00 m. En el costado derecho central se conserva un vacio de 5,00 m por 5,00 m, destinado a la zona de escaleras del edificio.
+La planta estructural propuesta corresponde a una losa maciza de concreto reforzado con soporte en elementos de acero organizada sobre los ejes A-B-C-D y 1-2-3-4. La geometria general ocupa un rectangulo de 16,00 m por 16,00 m, con una modulacion horizontal de 8,00 m, 3,00 m y 5,00 m, y una modulacion vertical de 6,00 m, 5,00 m y 5,00 m. En el costado derecho central se conserva un vacio de 5,00 m por 5,00 m, destinado a la zona de escaleras del edificio.
 
 El diseño arquitectonico se plantea con una franja central de corredor entre los ejes B y C, de 3,00 m de ancho, y con zonas de oficinas distribuidas a ambos lados, además se plantea en el espacio vacio ubicar la zona de escaleras.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{../plano/Captura de pantalla 2026-09-15 125706.png}
+    \includegraphics[width=0.65\textwidth]{../plano/Captura de pantalla 2026-09-15 125706.png}
     \caption{Planta estructural de losa maciza.}
     \label{fig:planta}
 \end{figure}
@@ -168,7 +168,7 @@ Por ultimo cabe mencionar que la resistencia de compresion del concreto adoptada
 \section{Criterios iniciales de carga}
 \label{sec:cargas}
 
-Para el cálculo preliminar de cargas se tomó como referencia la NSR-10. En el documento base se señaló la Tabla B.3.4.3-1, correspondiente a valores mínimos alternativos de carga muerta de elementos no estructurales cuando no se efectúa un análisis más detallado.
+Para el cálculo preliminar de cargas se tomó como referencia la NSR-10. A partir de la Tabla B.3.4.3-1, correspondiente a valores mínimos alternativos de carga muerta de elementos no estructurales cuando no se efectúa un análisis más detallado.
 
 De acuerdo con la referencia marcada para ocupación de oficinas, se adoptan inicialmente los siguientes valores:
 
@@ -187,7 +187,7 @@ De acuerdo con la referencia marcada para ocupación de oficinas, se adoptan ini
     \label{tab:cargas}
 \end{table}
 
-Para la carga viva se empleó la Tabla B.4.2.1-1 de la NSR-10, Cargas vivas mínimas uniformemente distribuidas.
+Para la carga viva se empleó la Tabla B.4.2.1-1, Cargas vivas mínimas uniformemente distribuidas.
 
 \begin{table}[H]
     \centering
@@ -265,16 +265,29 @@ Estos valores de carga última son los que se emplearán como punto de partida p
 \section{Análisis de la franja continua por pendiente-deflexión a mano}
 \label{sec:pendiente-deflexion}
 
-Por otro lado, se analizó la primera franja horizontal del nervio debajo del eje 4, entre las coordenadas A y D, que atraviesa continuamente los tres tramos de la planta: Oficina 3, corredor y Oficina 5. Esta franja se apoya sobre los ejes A y D, y es continua sobre los apoyos intermedios B y C, por lo que se resolvió mediante el método de pendiente-deflexión, con $\theta_2$ y $\theta_3$ (rotaciones en B y C) como incógnitas.
-
+Por otro lado, se analizarón dos nervios en la misma dirección con diferente espaciamiento entre los apoyos, estos nervios se pueden evidenciar en la figura 4.
 \subsection{Esquema estructural y cargas}
 
 La carga lineal sobre la franja se obtuvo multiplicando la carga última por metro cuadrado (Cuadro \ref{tab:carga-ultima}) por el ancho tributario correspondiente a cada tramo. No se adoptó un único factor para toda la franja, porque el tramo del corredor y los tramos de oficinas no reciben la misma franja tributaria de losa.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.78\textwidth]{../plano/Captura de pantalla 2026-09-15 125706.png}
-    \caption{Ubicación en planta de la franja continua analizada, correspondiente a la primera franja horizontal sobre el eje 1 entre A y D.}
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (planta) at (0,0)
+            {\includegraphics[width=0.92\textwidth]{../plano/Captura de pantalla 2026-09-15 125706.png}};
+        \path (planta.south west) -- (planta.south east) coordinate[pos=0.151] (xA);
+        \path (planta.south west) -- (planta.south east) coordinate[pos=0.685] (xC);
+        \path (planta.south west) -- (planta.south east) coordinate[pos=0.925] (xD);
+        \path (planta.south west) -- (planta.north west) coordinate[pos=0.814] (yN1);
+        \path (planta.south west) -- (planta.north west) coordinate[pos=0.578] (yN2);
+        \draw[red!80!black,line width=3pt,opacity=0.82] (xA |- yN1) -- (xD |- yN1);
+        \draw[orange!90!black,line width=3pt,opacity=0.88] (xA |- yN2) -- (xC |- yN2);
+        \path (xA |- yN1) -- (xD |- yN1) coordinate[pos=0.34] (tagN1);
+        \path (xA |- yN2) -- (xC |- yN2) coordinate[pos=0.30] (tagN2);
+        \node[above,fill=white,inner sep=1pt,text=red!80!black,font=\scriptsize\bfseries] at (tagN1) {Nervio 1};
+        \node[above,fill=white,inner sep=1pt,text=orange!75!black,font=\scriptsize\bfseries] at (tagN2) {Nervio 2};
+    \end{tikzpicture}
+    \caption{Ubicación en planta de los nervios analizados.}
     \label{fig:planta-nervio-analizado}
 \end{figure}
 
@@ -396,7 +409,7 @@ Resumiendo los momentos en la siguiente tabla queda:
     \label{tab:momentos-nervio}
 \end{table}
 
-Estos momentos sirven como referencia para el diseño a flexión de la losa, el análisis se repetirá posteriormente para otro nervio en la misma dirección con ayuda de un software para realizar los calculos de cuantía.
+Estos momentos sirven como referencia para la elección de la sección de acero para los nervios. El segundo nervio se analiza con Xvigas en la Sección \ref{sec:nervio2-xvigas}, y ambos resultados se consideran para la preselección del perfil de acero.
 
 \subsection{Reacciones, y diagramas de cortante y de momento}
 
@@ -456,6 +469,83 @@ Con estas expresiones se obtienen los diagramas de fuerza cortante y de momento 
     \caption{Diagrama de fuerza cortante (DFC, kN) y diagrama de momento flector (DMF, kN·m) de la franja analizada a mano.}
     \label{fig:dfc-dmf}
 \end{figure}
+
+\section{Análisis del segundo nervio con Xvigas}
+\label{sec:nervio2-xvigas}
+
+Se analizó además el primer nervio horizontal superior de la Oficina 2, continuo hacia el corredor entre los ejes A y C. El modelo de Xvigas comprende dos tramos: A-B de 8,00 m, cargado con $4,00$ kN/m, y B-C de 3,00 m, cargado con $7,20$ kN/m.
+
+La Figura \ref{fig:xvigas-cargas} muestra el modelo y las cargas introducidas. Los diagramas de cortante y momento de las Figuras \ref{fig:xvigas-cortante} y \ref{fig:xvigas-momento} se incorporan directamente desde los resultados de Xvigas. El momento negativo en B es aproximadamente $-25{,}52$ kN·m y el momento positivo máximo en el tramo A-B es aproximadamente $+20{,}51$ kN·m.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{figuras/xvigas_nervio2_cargas.jpeg}
+    \caption{Modelo y cargas lineales del segundo nervio en Xvigas.}
+    \label{fig:xvigas-cargas}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{figuras/xvigas_nervio2_cortante.jpeg}
+    \caption{Diagrama de fuerza cortante del segundo nervio obtenido en Xvigas.}
+    \label{fig:xvigas-cortante}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\textwidth]{figuras/xvigas_nervio2_momento.jpeg}
+    \caption{Diagrama de momento flector del segundo nervio obtenido en Xvigas.}
+    \label{fig:xvigas-momento}
+\end{figure}
+
+\section{Preselección del perfil de acero del nervio}
+\label{sec:seleccion-perfil}
+
+Para la preselección se adopta el mayor moment de los dos nervios estudiados, ya que no existe una diferencia drastica entre la magnitud de estos dos: $M_u=-25{,}52$ kN·m en el apoyo B del segundo nervio. 
+\subsection{Conversión del momento y módulo resistente requerido}
+
+La base de datos de perfiles está expresada en unidades inglesas por lo que se hace una conversión a este sistema. Con $1$ kN·m $=8{,}8507$ kip·in:
+
+\begin{equation*}
+|M_u|=25{,}52\times 8{,}8507=225{,}87\ \text{kip·in}
+\end{equation*}
+
+Para esta comparación preliminar se adopta acero ASTM A572 Grado 50, con $F_y=50$ ksi. El módulo resistente elástico requerido alrededor del eje fuerte se estima como:
+
+\begin{equation*}
+S_{\mathrm{req}}=\frac{|M_u|}{F_y}=\frac{225{,}87\ \text{kip·in}}{50\ \text{kip/in}^2}=4{,}52\ \text{in}^3
+\end{equation*}
+
+Se comparan secciones transversales tipo C y MC, excluyendo perfiles PHR C. Realizando un flitro inicial se obtienen los siguientes resultados.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{>{\raggedright\arraybackslash}p{2.4cm} c c c c >{\raggedright\arraybackslash}p{2.7cm}}
+        \toprule
+        Perfil & Altura (cm) & Peso (kg/m) & $S_x$ (in$^3$) & Reserva sobre $S_{\mathrm{req}}$ & Evaluación preliminar \\
+        \midrule
+        C6X8.2 & 15,24 & 12,20 & 4,35 & $-3,71\%$ & No cumple \\
+        MC8X8.5 & 20,32 & 12,65 & 5,82 & $28,83\%$ & Seleccionado \\
+        C7X9.8 & 17,78 & 14,58 & 6,07 & $34,37\%$ & Cumple; mayor peso \\
+        MC10X6.5 & 25,40 & 9,67 & 4,59 & $1,61\%$ & Cumple ajustado; descartado por altura \\
+        \bottomrule
+    \end{tabular}
+    \caption{Comparación preliminar de perfiles frente al módulo resistente requerido.}
+    \label{tab:perfiles-preseleccion}
+\end{table}
+
+El perfil C6X8.2 no alcanza el módulo requerido para el momento gobernante. El MC10X6.5 apenas lo supera y se descarta por su altura de 25,40 cm, que incrementaría el peralte visible del nervio. El C7X9.8 ofrece mayor reserva, pero pesa 1,93 kg/m más que el MC8X8.5. Se preselecciona el MC8X8.5 por cumplir con una reserva de 28,83\% y mantener un peso moderado frente al C7X9.8. Además, se propone mantener una sección común para los nervios por criterio de constructibilidad.
+
+La sección preseleccionada es MC8X8.5. Según la ficha consultada, tiene un área transversal de $2{,}5$ in$^2$, una masa lineal de $12{,}65$ kg/m, una altura total de $20{,}32$ cm y módulos resistentes elásticos $S_{\mathrm{bottom}}=S_{\mathrm{top}}=5{,}82$ in$^3$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{figuras/seccion_perfil_mc8x8_5.png}
+    \caption{Sección transversal del perfil MC8X8.5 preseleccionado.}
+    \label{fig:seccion-perfil}
+\end{figure}
+
 
 \section{Nota}
 

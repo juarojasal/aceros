@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.18)  20 SEP 2026 09:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.18)  25 SEP 2026 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -434,7 +434,9 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)) (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip54
 
@@ -606,34 +608,56 @@ LaTeX Info: Redefining \% on input line 1.
 \openout5 = `informe_grupo2.toc'.
 
  [1]
-<../plano/Captura de pantalla 2026-09-15 125706.png, id=84, 451.6875pt x 428.19975pt>
+<../plano/Captura de pantalla 2026-09-15 125706.png, id=99, 451.6875pt x 428.19975pt>
 File: ../plano/Captura de pantalla 2026-09-15 125706.png Graphic file (type png)
 <use ../plano/Captura de pantalla 2026-09-15 125706.png>
 Package pdftex.def Info: ../plano/Captura de pantalla 2026-09-15 125706.png  used on input line 83.
-(pdftex.def)             Requested size: 330.42041pt x 313.2562pt.
+(pdftex.def)             Requested size: 306.81741pt x 290.87794pt.
  [1 <../plano/Captura de pantalla 2026-09-15 125706.png>] [2] [3] [4]
 File: ../plano/Captura de pantalla 2026-09-15 125706.png Graphic file (type png)
 <use ../plano/Captura de pantalla 2026-09-15 125706.png>
-Package pdftex.def Info: ../plano/Captura de pantalla 2026-09-15 125706.png  used on input line 276.
-(pdftex.def)             Requested size: 368.18378pt x 349.06139pt.
+Package pdftex.def Info: ../plano/Captura de pantalla 2026-09-15 125706.png  used on input line 277.
+(pdftex.def)             Requested size: 434.26787pt x 411.7074pt.
  [5] [6]
-<figuras/continuidad_pendiente_deflexion.png, id=141, 1453.43pt x 1090.0725pt>
+<figuras/continuidad_pendiente_deflexion.png, id=156, 1453.43pt x 1090.0725pt>
 File: figuras/continuidad_pendiente_deflexion.png Graphic file (type png)
 <use figuras/continuidad_pendiente_deflexion.png>
-Package pdftex.def Info: figuras/continuidad_pendiente_deflexion.png  used on input line 352.
+Package pdftex.def Info: figuras/continuidad_pendiente_deflexion.png  used on input line 365.
 (pdftex.def)             Requested size: 368.18378pt x 276.12685pt.
  [7 <./figuras/continuidad_pendiente_deflexion.png (PNG copy)>] [8]
-<figuras/diagrama_cortante_nervio1.png, id=156, 730.8906pt x 405.6756pt>
+<figuras/diagrama_cortante_nervio1.png, id=172, 730.8906pt x 405.6756pt>
 File: figuras/diagrama_cortante_nervio1.png Graphic file (type png)
 <use figuras/diagrama_cortante_nervio1.png>
-Package pdftex.def Info: figuras/diagrama_cortante_nervio1.png  used on input line 452.
+Package pdftex.def Info: figuras/diagrama_cortante_nervio1.png  used on input line 465.
 (pdftex.def)             Requested size: 434.26787pt x 241.03642pt.
-<figuras/diagrama_momento_nervio1.png, id=157, 730.8906pt x 405.6756pt>
+<figuras/diagrama_momento_nervio1.png, id=173, 730.8906pt x 405.6756pt>
 File: figuras/diagrama_momento_nervio1.png Graphic file (type png)
 <use figuras/diagrama_momento_nervio1.png>
-Package pdftex.def Info: figuras/diagrama_momento_nervio1.png  used on input line 455.
+Package pdftex.def Info: figuras/diagrama_momento_nervio1.png  used on input line 468.
 (pdftex.def)             Requested size: 434.26787pt x 241.03642pt.
- [9] [10 <./figuras/diagrama_cortante_nervio1.png> <./figuras/diagrama_momento_nervio1.png>] (informe_grupo2.aux
+ [9] [10 <./figuras/diagrama_cortante_nervio1.png> <./figuras/diagrama_momento_nervio1.png>]
+<figuras/xvigas_nervio2_cargas.jpeg, id=189, 1186.4325pt x 389.455pt>
+File: figuras/xvigas_nervio2_cargas.jpeg Graphic file (type jpg)
+<use figuras/xvigas_nervio2_cargas.jpeg>
+Package pdftex.def Info: figuras/xvigas_nervio2_cargas.jpeg  used on input line 482.
+(pdftex.def)             Requested size: 434.26787pt x 142.55101pt.
+<figuras/xvigas_nervio2_cortante.jpeg, id=190, 1196.47pt x 662.475pt>
+File: figuras/xvigas_nervio2_cortante.jpeg Graphic file (type jpg)
+<use figuras/xvigas_nervio2_cortante.jpeg>
+Package pdftex.def Info: figuras/xvigas_nervio2_cortante.jpeg  used on input line 489.
+(pdftex.def)             Requested size: 434.26787pt x 240.45187pt.
+<figuras/xvigas_nervio2_momento.jpeg, id=191, 1180.41pt x 647.41875pt>
+File: figuras/xvigas_nervio2_momento.jpeg Graphic file (type jpg)
+<use figuras/xvigas_nervio2_momento.jpeg>
+Package pdftex.def Info: figuras/xvigas_nervio2_momento.jpeg  used on input line 496.
+(pdftex.def)             Requested size: 434.26787pt x 238.1779pt.
+ [11 <./figuras/xvigas_nervio2_cargas.jpeg> <./figuras/xvigas_nervio2_cortante.jpeg>] [12 <./figuras/xvigas_nervio2_momento.jpeg>]
+<figuras/seccion_perfil_mc8x8_5.png, id=204, 395.67825pt x 263.7855pt>
+File: figuras/seccion_perfil_mc8x8_5.png Graphic file (type png)
+<use figuras/seccion_perfil_mc8x8_5.png>
+Package pdftex.def Info: figuras/seccion_perfil_mc8x8_5.png  used on input line 544.
+(pdftex.def)             Requested size: 339.86305pt x 226.58545pt.
+ [13 <./figuras/seccion_perfil_mc8x8_5.png>] [14] (informe_grupo2.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -642,20 +666,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `informe_grupo2.out' has not changed.
-(rerunfilecheck)             Checksum: 047AA6866E14640B82F79234DB6A17AF;2545.
+(rerunfilecheck)             Checksum: 342FAC5590D5AAF398C9BBEE3D80A28B;3419.
  ) 
 Here is how much of TeX's memory you used:
- 22325 strings out of 467871
- 417249 string characters out of 5417892
- 831103 words of memory out of 5000000
- 50792 multiletter control sequences out of 15000+600000
+ 22513 strings out of 467871
+ 421345 string characters out of 5417892
+ 834297 words of memory out of 5000000
+ 50965 multiletter control sequences out of 15000+600000
  646559 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,104p,542b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,104p,617b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on informe_grupo2.pdf (12 pages, 1309456 bytes).
+Output written on informe_grupo2.pdf (16 pages, 1629972 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 673 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

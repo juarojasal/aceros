@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1789913864.49043 "d:/Documents/Desktop/Universidad/ACEROS/aceros/trabajoplano/informe/informe_grupo2.tex" "informe_grupo2.pdf" "informe_grupo2" 1789913868.37556 0
+["pdflatex"] 1790346302.92126 "d:/Documents/Desktop/Universidad/ACEROS/aceros/trabajoplano/informe/informe_grupo2.tex" "informe_grupo2.pdf" "informe_grupo2" 1790346305.60719 0
   "../plano/Captura de pantalla 2026-09-15 125706.png" 1789495026 20044 ce69fd7ede2202285cf10a1505da0a24 ""
   "C:/Users/Lenovo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1789259380 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/Lenovo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1789259393 19872 1a72c59e1f27ba78fdeaf64c40d74c5c ""
@@ -95,6 +95,7 @@
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1756451143 35251 5ff5b5b310c5ac882610e0ccc99095e7 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1756451143 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1756451144 8893 e851de2175338fdf7c17f3e091d94618 ""
+  "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex" 1756451144 15929 463535aa2c4268fead6674a75c0e8266 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex" 1756451144 770 82e332cc9cc48e06b8070d74393a185a ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1756451144 11518 738408f795261b70ce8dd47459171309 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1756451144 186859 0445d9a41a87648b4723e04765409541 ""
@@ -185,14 +186,18 @@
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1761901070 15651 9d7c62df82cb29a555c00550babfe364 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/Documents/Desktop/Universidad/ACEROS/aceros/trabajoplano/informe/informe_grupo2.tex" 1789913863 20163 1f94ec95b09a7384bcd9a02297ac3542 ""
+  "d:/Documents/Desktop/Universidad/ACEROS/aceros/trabajoplano/informe/informe_grupo2.tex" 1790346302 25396 d9f5050b085aff8af29fb5cae0632e3b ""
   "figuras/continuidad_pendiente_deflexion.png" 1789566117 806869 225e3921b4b0eae2ba0d79c948680008 ""
   "figuras/diagrama_cortante_nervio1.png" 1789912486 149535 d1fab78d8f7011a377a41ddcbeb37d47 ""
   "figuras/diagrama_momento_nervio1.png" 1789912487 152181 c5d289481a0c12f28f3616d2eb26e305 ""
-  "informe_grupo2.aux" 1789913867 5827 388748184a83d9087a4312b2eda4f919 "pdflatex"
-  "informe_grupo2.out" 1789913867 2545 047aa6866e14640b82f79234db6a17af "pdflatex"
-  "informe_grupo2.tex" 1789913863 20163 1f94ec95b09a7384bcd9a02297ac3542 ""
-  "informe_grupo2.toc" 1789913867 1136 273be5d06df20f816edc62bd75dec559 "pdflatex"
+  "figuras/seccion_perfil_mc8x8_5.png" 1790345692 179679 23889d83ed176a1896a0d38119c0b9bb ""
+  "figuras/xvigas_nervio2_cargas.jpeg" 1790342057 31202 90750a54ac664d5f2128e734cdeeb5e4 ""
+  "figuras/xvigas_nervio2_cortante.jpeg" 1790342080 54679 93b85f6753136498e9754dbe9a192578 ""
+  "figuras/xvigas_nervio2_momento.jpeg" 1790342105 55759 dd32b35031441ec9004f06d7b751c895 ""
+  "informe_grupo2.aux" 1790346305 7765 caceeda6efa7ea3df319480bc586a8e6 "pdflatex"
+  "informe_grupo2.out" 1790346305 3419 342fac5590d5aaf398c9bbee3d80a28b "pdflatex"
+  "informe_grupo2.tex" 1790346302 25396 d9f5050b085aff8af29fb5cae0632e3b ""
+  "informe_grupo2.toc" 1790346305 1454 9ef8423c498704103324a490ba7b622b "pdflatex"
   (generated)
   "informe_grupo2.aux"
   "informe_grupo2.log"

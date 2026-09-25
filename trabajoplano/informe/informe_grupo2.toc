@@ -5,9 +5,12 @@
 \contentsline {subsection}{\numberline {3.1}Peso propio de la losa maciza}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Combinación de cargas mayoradas}{4}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Análisis de la franja continua por pendiente-deflexión a mano}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Esquema estructural y cargas}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Esquema estructural y cargas}{4}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Momentos de empotramiento}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Ecuaciones de equilibrio y solución}{6}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Momentos en los apoyos}{8}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Reacciones, y diagramas de cortante y de momento}{8}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Nota}{10}{section.5}%
+\contentsline {section}{\numberline {5}Análisis del segundo nervio con Xvigas}{10}{section.5}%
+\contentsline {section}{\numberline {6}Preselección del perfil de acero del nervio}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conversión del momento y módulo resistente requerido}{12}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Nota}{14}{section.7}%
